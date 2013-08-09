@@ -1,0 +1,24 @@
+@import "blueprint/grid"
+
+body
+	background: yellow
+
+#blogger_engine-data_container
+	@include container
+#Blog1
+	+column(18)
+	background: blue
+
+	.date-outer
+		margin-bottom: 10px
+
+		.post
+			background: white
+
+
+#Profile1
+	+column(6, true)
+	background: green
+
+#BlogArchive1
+	+column(6, true)

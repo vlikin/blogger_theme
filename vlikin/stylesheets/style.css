@@ -1,0 +1,58 @@
+/* line 3, ../sass/style.sass */
+body {
+  background: yellow;
+}
+
+/* line 6, ../sass/style.sass */
+#blogger_engine-data_container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 8, ../sass/style.sass */
+#Blog1 {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 710px;
+  background: blue;
+}
+/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #Blog1 {
+  overflow-x: hidden;
+}
+/* line 12, ../sass/style.sass */
+#Blog1 .date-outer {
+  margin-bottom: 10px;
+}
+/* line 15, ../sass/style.sass */
+#Blog1 .date-outer .post {
+  background: white;
+}
+
+/* line 19, ../sass/style.sass */
+#Profile1 {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 230px;
+  background: green;
+}
+/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #Profile1 {
+  overflow-x: hidden;
+}
+
+/* line 23, ../sass/style.sass */
+#BlogArchive1 {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 230px;
+}
+/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #BlogArchive1 {
+  overflow-x: hidden;
+}

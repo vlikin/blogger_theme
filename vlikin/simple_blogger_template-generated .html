@@ -1,0 +1,1128 @@
+
+<!-- saved from url=(0027)http://vlikin.blogspot.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="./simple_blogger_template-generated _files/103638431-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="./simple_blogger_template-generated _files/authorization.css">
+<style id="page-skin-1" type="text/css"><!--
+
+--></style>
+
+<meta content="blogger" name="generator">
+<link href="http://vlikin.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="./simple_blogger_template-generated _files/simple_blogger_template-generated .html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="Сбор полезных статей - Atom" href="http://vlikin.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Сбор полезных статей - RSS" href="http://vlikin.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Сбор полезных статей - Atom" href="http://www.blogger.com/feeds/4395551187251361493/posts/default">
+<link rel="me" href="http://www.blogger.com/profile/11664264188346381936">
+<link rel="openid.server" href="http://www.blogger.com/openid-server.g">
+<link rel="openid.delegate" href="./simple_blogger_template-generated _files/simple_blogger_template-generated .html">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Title</title>
+<head>
+<!-- begin s5 injection -->
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if lt IE 8]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<!-- end s5 injection -->
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",k="?m=1";function l(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+k;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var m=l();m&&window.location.replace(m)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class="section" id="blogger_engine-data_container"><div class="widget Header" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+Сбор полезных статей
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>
+</span></p>
+</div>
+</div>
+</div><div class="widget Blog" id="Blog1">
+<div class="blog-posts hfeed">
+<!-- google_ad_section_start(name=default) -->
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>среда, 7 августа 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="2374457785894356540" itemprop="postId">
+<a name="2374457785894356540"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/08/php-530.html">Позднее статическое связывание PHP &gt;= 5.3.0</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-2374457785894356540" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<b id="docs-internal-guid--94ab096-579c-7f4d-6dc1-abacea9a7b08" style="font-weight: normal;"></b><br>
+<div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;">
+<b id="docs-internal-guid--94ab096-579c-7f4d-6dc1-abacea9a7b08" style="font-weight: normal;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">Это интересное простое в реализации свойство, которое предаёт гибкость в ООП. Вроде бы всё просто, но различие схем использования может запутать. Статические свойства ООП используются для работы с классами без инициализации объектов. Инициализированные объекты также могут использовать статические свойства ООП. </span><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">self::</span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, </span><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">parent::</span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, </span><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">static:: </span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">помогают</span><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; vertical-align: baseline; white-space: pre-wrap;"> </span><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">использовать статические свойства ООП в PHP. Данные операторы могут ввести себя одинаково. Всё зависит от условий использования. Основное различие опреаторов self::, parent::, static:: это среда(scope) их исполинения. Заметьте, что не только то откуда вызывается статический метод, или свойство но и то какие зависимые свойства классов они используют.</span></b></div>
+<div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;">
+<b id="docs-internal-guid--94ab096-579c-7f4d-6dc1-abacea9a7b08" style="font-weight: normal;"><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">self:: - </span><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; vertical-align: baseline; white-space: pre-wrap;">Среда определения, класс где метод, свойство были объявлены</span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">.</span></b></div>
+<div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;">
+<b id="docs-internal-guid--94ab096-579c-7f4d-6dc1-abacea9a7b08" style="font-weight: normal;"><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">parent::</span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> - Среда родительского класса.</span></b></div>
+<div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;">
+<b id="docs-internal-guid--94ab096-579c-7f4d-6dc1-abacea9a7b08" style="font-weight: normal;"><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">static:: - </span><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; vertical-align: baseline; white-space: pre-wrap;">Среда где происходит вызов метода, свойства.</span></b></div>
+<b id="docs-internal-guid--94ab096-579c-7f4d-6dc1-abacea9a7b08" style="font-weight: normal;"><br><span style="background-color: white; font-family: Arial; font-size: 15px; font-style: italic; vertical-align: baseline; white-space: pre-wrap;"></span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">Всё начиналось с перевода </span><span style="background-color: white; color: #1155cc; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"><a href="http://php.net/manual/en/language.oop5.late-static-bindings.php">документации</a></span><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">. Перевести документацию доходчиво не получилось. Материал выложил так, как понял. Примеры смотрите в документации. __CLASS__, &nbsp;</span><a href="http://www.php.net/manual/en/function.forward-static-call.php" style="text-decoration: none;"><span style="background-color: white; color: #000099; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">forward_static_call()</span></a><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, </span><a href="http://www.php.net/manual/en/function.get-called-class.php" style="text-decoration: none;"><span style="background-color: white; color: #000099; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">get_called_class()</span></a><span style="background-color: white; font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> помогают в определении среды исполнения</span></b></div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/08/php-530.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/08/php-530.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-08-07T00:11:00-07:00">0:11</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/08/php-530.html#comment-form" onclick="">
+Комментариев нет:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=2374457785894356540&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Ярлыки:
+<a href="http://vlikin.blogspot.com/search/label/LSB" rel="tag">LSB</a>,
+<a href="http://vlikin.blogspot.com/search/label/php" rel="tag">php</a>,
+<a href="http://vlikin.blogspot.com/search/label/php5.3" rel="tag">php5.3</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+            </div></div>
+          
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>воскресенье, 28 июля 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="4014799563401995002" itemprop="postId">
+<a name="4014799563401995002"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/07/mulilambda-python.html">Mulilambda - Элемент функционального программирования в Python</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-4014799563401995002" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">В языке Python, иногда, явно выделяется стиль программирования из-за того, что нету множество вариаций реализации. Написал замудро. Python интерпретируемый язык с динамической типизацией. Какие ещё могут быть ограничения? Наверное это неудобство при переходе с различных технологий сравнимым Python. Немного напрягает отсутствие inline определения анонимных функций. Да lambda функция. Но во многих вариантах она неудобна. Вот ещё один вариант функционального программирования используя lambda где выполняется несколько команд. Буду благодарен, если кто опровергнет данный подход и укажет на более лучший подход функционального программирования в python.<br>
+<pre>lambda: (
+  doFoo('abc'),
+  doBar(123),
+  doBaz()
+)
+</pre>Real example:<br>
+<br>
+<pre>pushButtonShowDialog.clicked.connect(
+  lambda: (
+    field1.clear(),
+    spinBox1.setValue(0),
+    diag.show()
+  )
+)
+</pre></div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/07/mulilambda-python.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/07/mulilambda-python.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-07-28T07:13:00-07:00">7:13</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/07/mulilambda-python.html#comment-form" onclick="">
+Комментариев нет:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=4014799563401995002&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Ярлыки:
+<a href="http://vlikin.blogspot.com/search/label/Functional%20style" rel="tag">Functional style</a>,
+<a href="http://vlikin.blogspot.com/search/label/Lambda" rel="tag">Lambda</a>,
+<a href="http://vlikin.blogspot.com/search/label/python" rel="tag">python</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+            </div></div>
+          
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>пятница, 12 июля 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="4221938700482100401" itemprop="postId">
+<a name="4221938700482100401"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/07/c-8.html">Cущности конфигурации в Друпал 8</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-4221938700482100401" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+В Drupal 8 появляется новый тип сущности - сущность конфигурации. Кто работал с Drupal 7 тот знаком с понятиями сущностей. Drupal 8 предостовляет новую концепцию сущности конфигурации, которая схожа с CTools exportable(экспортированный) в Drupal 7. В Drupal 7 CTools exportables используется такими модулями как: Views, Panels, Page Manager, Context, что помогает безболезненно экспортировать конфигурацию для хранения в системах контроля версий кода, размещения проектов на различные уровни разработки проектов.z<br>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="jump-link">
+<a href="http://vlikin.blogspot.com/2013/07/c-8.html#more" title="Cущности конфигурации в Друпал 8">Дальше »</a>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/07/c-8.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/07/c-8.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-07-12T07:31:00-07:00">7:31</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/07/c-8.html#comment-form" onclick="">
+Комментариев нет:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=4221938700482100401&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Ярлыки:
+<a href="http://vlikin.blogspot.com/search/label/Configuration%20managment" rel="tag">Configuration managment</a>,
+<a href="http://vlikin.blogspot.com/search/label/D8" rel="tag">D8</a>,
+<a href="http://vlikin.blogspot.com/search/label/Drupal" rel="tag">Drupal</a>,
+<a href="http://vlikin.blogspot.com/search/label/entity" rel="tag">entity</a>,
+<a href="http://vlikin.blogspot.com/search/label/Processed%20translation" rel="tag">Processed translation</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+            </div></div>
+          
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>четверг, 11 июля 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="3915870356683718058" itemprop="postId">
+<a name="3915870356683718058"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/07/drupal8-using-drupal-8s-new-route.html">Контроллеры маршрутизации в Drupal8 - Using Drupal 8's new route controllers</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-3915870356683718058" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+Частично Web Services и Context в ядре инициатив традиционные процедуры обратного вызова страниц были сконвертированы в новые обьективные ориентированные контроллеры маршрутов.<br>
+<b>Зачем нам понадобился новый компонент Routing?</b><br>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="jump-link">
+<a href="http://vlikin.blogspot.com/2013/07/drupal8-using-drupal-8s-new-route.html#more" title="Контроллеры маршрутизации в Drupal8 - Using Drupal 8&#39;s new route controllers">Дальше »</a>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/07/drupal8-using-drupal-8s-new-route.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/07/drupal8-using-drupal-8s-new-route.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-07-11T05:32:00-07:00">5:32</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/07/drupal8-using-drupal-8s-new-route.html#comment-form" onclick="">
+Комментариев нет:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=3915870356683718058&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Ярлыки:
+<a href="http://vlikin.blogspot.com/search/label/D8" rel="tag">D8</a>,
+<a href="http://vlikin.blogspot.com/search/label/DIC" rel="tag">DIC</a>,
+<a href="http://vlikin.blogspot.com/search/label/Drupal" rel="tag">Drupal</a>,
+<a href="http://vlikin.blogspot.com/search/label/Routing" rel="tag">Routing</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+            </div></div>
+          
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>вторник, 9 июля 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="3533256907130007071" itemprop="postId">
+<a name="3533256907130007071"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/07/drupal-8.html">Система плагинов в Drupal 8</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-3533256907130007071" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<b id="docs-internal-guid-1b2cf47d-c2d6-20b5-3f44-e290598b7524"><b id="docs-internal-guid-1b2cf47d-c2d6-20b5-3f44-e290598b7524" style="font-weight: normal;">На всё не хватает времени. Что бы понимать идиологию Друпал надо на него смотреть сверху - необходимо владеть всеми направлениями. Потому успех к Друпал разработчику приходит с опытом. Данная статья - перевод являеться одной из первых страниц документации про плагины. Это вид сверху на систему плагинов. Сама собой система плагинов несложна. Сложно понять её настоящее назначение и место в экоссистеме Друпал. Советую при дальнейшем детальном изучении системы на примерах возращаться к этому переводу и находить ответы на такие вопросы: что это такое, где его место.&nbsp;</b></b><br>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="jump-link">
+<a href="http://vlikin.blogspot.com/2013/07/drupal-8.html#more" title="Система плагинов в Drupal 8">Дальше »</a>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/07/drupal-8.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/07/drupal-8.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-07-09T03:17:00-07:00">3:17</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/07/drupal-8.html#comment-form" onclick="">
+Комментариев нет:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=3533256907130007071&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Ярлыки:
+<a href="http://vlikin.blogspot.com/search/label/D8" rel="tag">D8</a>,
+<a href="http://vlikin.blogspot.com/search/label/Drupal" rel="tag">Drupal</a>,
+<a href="http://vlikin.blogspot.com/search/label/Plugin%20system" rel="tag">Plugin system</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+            </div></div>
+          
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>среда, 26 июня 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="4582111767811998866" itemprop="postId">
+<a name="4582111767811998866"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/06/2012-kyiv-code-sprint-2013.html">EventDispatcher Drupal 8 Challenging</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-4582111767811998866" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">Эта статья основана на на статье описанной ещё в июле 2012 и проведённого Kyiv Code Sprint в июне 2013. Материал статьи остаётся актульным.  Здесь опишем как работает система Event Dispatcher в Drupal 8. Будьте внимательны так как диспетчер в Д8 всеволишь один. Хотя логичнее сделать(для меня) для каждого события свой диспетчер. Наверное это будет сделано в Д9. Так как Д8 производительностью не блестает и подбираеться дата релиза, а работы не початый край. Так же это только начало познаний сложных структур Symfony 2 в Drupal 8.<br>
+<br>
+</div>
+<div style="clear: both;"></div>
+</div>
+<div class="jump-link">
+<a href="http://vlikin.blogspot.com/2013/06/2012-kyiv-code-sprint-2013.html#more" title="EventDispatcher Drupal 8 Challenging">Дальше »</a>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/06/2012-kyiv-code-sprint-2013.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/06/2012-kyiv-code-sprint-2013.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-06-26T13:08:00-07:00">13:08</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/06/2012-kyiv-code-sprint-2013.html#comment-form" onclick="">
+2 комментария:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=4582111767811998866&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Ярлыки:
+<a href="http://vlikin.blogspot.com/search/label/D8" rel="tag">D8</a>,
+<a href="http://vlikin.blogspot.com/search/label/Drupal" rel="tag">Drupal</a>,
+<a href="http://vlikin.blogspot.com/search/label/drupal_container" rel="tag">drupal_container</a>,
+<a href="http://vlikin.blogspot.com/search/label/Event%20Dispatcher" rel="tag">Event Dispatcher</a>,
+<a href="http://vlikin.blogspot.com/search/label/Services" rel="tag">Services</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+            </div></div>
+          
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>четверг, 20 июня 2013 г.</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="4395551187251361493" itemprop="blogId">
+<meta content="707177515755410032" itemprop="postId">
+<a name="707177515755410032"></a>
+<h3 class="post-title entry-title" itemprop="name">
+<a href="http://vlikin.blogspot.com/2013/06/cachekey.html">Альтернатива drupal_static - cache_key</a>
+</h3>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content" id="post-body-707177515755410032" itemprop="description articleBody">
+<div dir="ltr" style="text-align: left;" trbidi="on">При кешировании результатов функций с параметрами приходиться генерировать ключ. Данный код подходит почти под все варианты. Только не надо злоупотреблять.<br>
+<br>
+<pre>function get_athletes($customer_tid_list, $team_nid_list, $reset=FALSE) {
+  static $cache = array();
+  $cache_key = crc32(print_r(func_get_args(), 1));
+  if (!$reset &amp;&amp; array_key_exists($cache_key, $cache)) {
+    return $cache[$cache_key];
+  }
+  ...
+  return $cache[$cache_key] = $result;
+}
+</pre></div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Автор:
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="http://www.blogger.com/profile/11664264188346381936" itemprop="url">
+<a class="g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" title="author profile" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+<span itemprop="name">vlikin</span>
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+на
+<meta content="http://vlikin.blogspot.com/2013/06/cachekey.html" itemprop="url">
+<a class="timestamp-link" href="http://vlikin.blogspot.com/2013/06/cachekey.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2013-06-20T03:54:00-07:00">3:54</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://vlikin.blogspot.com/2013/06/cachekey.html#comment-form" onclick="">
+Комментариев нет:
+    </a>
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-480773181">
+<a href="http://www.blogger.com/post-edit.g?blogID=4395551187251361493&postID=707177515755410032&from=pencil" title="Изменить сообщение">
+<img alt="" class="icon-action" height="18" src="./simple_blogger_template-generated _files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+<!-- google_ad_section_end -->
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://vlikin.blogspot.com/search?updated-max=2013-06-20T03:54:00-07:00&max-results=7" id="Blog1_blog-pager-older-link" title="Предыдущие">Предыдущие</a>
+</span>
+<a class="home-link" href="./simple_blogger_template-generated _files/simple_blogger_template-generated .html">Главная страница</a>
+</div>
+<div class="clear"></div>
+<div class="blog-feeds">
+<div class="feed-links">
+Подписаться на:
+<a class="feed-link" href="http://vlikin.blogspot.com/feeds/posts/default" target="_blank" type="application/atom+xml">Сообщения (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'ru'};</script>
+</div><div class="widget Profile" id="Profile1" style="">
+<h2>About Me</h2>
+<div class="widget-content">
+<a href="http://www.blogger.com/profile/11664264188346381936"><img alt="Моя фотография" class="profile-img" height="80" src="./simple_blogger_template-generated _files/33.jpg" width="71"></a>
+<dl class="profile-datablock">
+<dt class="profile-data">
+<a class="profile-name-link g-profile" href="http://www.blogger.com/profile/11664264188346381936" rel="author" style="background-image: url(//www.blogger.com/img/logo-16.png);" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+vlikin
+</a>
+</dt>
+</dl>
+<a class="profile-link" href="http://www.blogger.com/profile/11664264188346381936" rel="author">Просмотреть профиль</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4395551187251361493&widgetType=Profile&widgetId=Profile1&action=editWidget&sectionId=blogger_engine-data_container" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Profile1&quot;));" target="configProfile1" title="Изменить">
+<img alt="" height="18" src="./simple_blogger_template-generated _files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget BlogArchive" id="BlogArchive1">
+<h2>Blog Archive</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/search?updated-min=2013-01-01T00:00:00-08:00&updated-max=2014-01-01T00:00:00-08:00&max-results=21">2013</a>
+<span class="post-count" dir="ltr">(21)</span>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_08_01_archive.html">Август</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://vlikin.blogspot.com/2013/08/php-530.html">Позднее статическое связывание PHP &gt;= 5.3.0</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_07_01_archive.html">Июль</a>
+<span class="post-count" dir="ltr">(4)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_06_01_archive.html">Июнь</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_05_01_archive.html">Май</a>
+<span class="post-count" dir="ltr">(8)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_04_01_archive.html">Апрель</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_03_01_archive.html">Март</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2013_02_01_archive.html">Февраль</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/search?updated-min=2012-01-01T00:00:00-08:00&updated-max=2013-01-01T00:00:00-08:00&max-results=25">2012</a>
+<span class="post-count" dir="ltr">(25)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_10_01_archive.html">Октябрь</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_08_01_archive.html">Август</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_07_01_archive.html">Июль</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_05_01_archive.html">Май</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_04_01_archive.html">Апрель</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_03_01_archive.html">Март</a>
+<span class="post-count" dir="ltr">(7)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_02_01_archive.html">Февраль</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2012_01_01_archive.html">Январь</a>
+<span class="post-count" dir="ltr">(4)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/search?updated-min=2011-01-01T00:00:00-08:00&updated-max=2012-01-01T00:00:00-08:00&max-results=50">2011</a>
+<span class="post-count" dir="ltr">(50)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_12_01_archive.html">Декабрь</a>
+<span class="post-count" dir="ltr">(7)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_11_01_archive.html">Ноябрь</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_10_01_archive.html">Октябрь</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_09_01_archive.html">Сентябрь</a>
+<span class="post-count" dir="ltr">(6)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_08_01_archive.html">Август</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_07_01_archive.html">Июль</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_06_01_archive.html">Июнь</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_05_01_archive.html">Май</a>
+<span class="post-count" dir="ltr">(8)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_04_01_archive.html">Апрель</a>
+<span class="post-count" dir="ltr">(11)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_03_01_archive.html">Март</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_02_01_archive.html">Февраль</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2011_01_01_archive.html">Январь</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/search?updated-min=2010-01-01T00:00:00-08:00&updated-max=2011-01-01T00:00:00-08:00&max-results=4">2010</a>
+<span class="post-count" dir="ltr">(4)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://vlikin.blogspot.com/2010_12_01_archive.html">Декабрь</a>
+<span class="post-count" dir="ltr">(4)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4395551187251361493&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=blogger_engine-data_container" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogArchive1&quot;));" target="configBlogArchive1" title="Изменить">
+<img alt="" height="18" src="./simple_blogger_template-generated _files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="./simple_blogger_template-generated _files/2768457969-widgets.js"></script>
+<script type="text/javascript" src="./simple_blogger_template-generated _files/plusone.js" gapi_processed="true"></script>
+<script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '4395551187251361493';BLOG_attachCsiOnload(''); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d4395551187251361493','//vlikin.blogspot.com/','4395551187251361493');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '4395551187251361493', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Сбор полезных статей', 'pageType': 'index', 'url': 'http://vlikin.blogspot.com/', 'canonicalUrl': 'http://vlikin.blogspot.com/', 'canonicalHomepageUrl': 'http://vlikin.blogspot.com/', 'homepageUrl': 'http://vlikin.blogspot.com/', 'blogspotFaviconUrl': 'http://vlikin.blogspot.com/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': '', 'pageTitle': 'Сбор полезных статей', 'encoding': 'UTF-8', 'locale': 'ru', 'localeUnderscoreDelimited': 'ru', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Сбор полезных статей - Atom\42 href\75\42http://vlikin.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Сбор полезных статей - RSS\42 href\75\42http://vlikin.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Сбор полезных статей - Atom\42 href\75\42http://www.blogger.com/feeds/4395551187251361493/posts/default\42 /\76\n', 'meTag': '\74link rel\75\42me\42 href\75\42http://www.blogger.com/profile/11664264188346381936\42 /\76\n', 'openIdOpTag': '\74link rel\75\42openid.server\42 href\75\42http://www.blogger.com/openid-server.g\42 /\76\n\74link rel\75\42openid.delegate\42 href\75\42http://vlikin.blogspot.com/\42 /\76\n', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,e\75\42jstiming\42,g\75\42tick\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){c\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[c,d]};this[g](\42start\42,null,a)}var a\75new d;b.jstiming\75{Timer:d,load:a};if(b.performance\46\46b.performance.timing){var a\75b.performance.timing,c\75b[e].load,f\75a.navigationStart,a\75a.responseStart;0\74f\46\46a\76\75f\46\46(c[g](\42_wtsrt\42,void 0,f),c[g](\42wtsrt_\42,\42_wtsrt\42,a),c[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,b.chrome\46\46b.chrome.csi\46\46(a\75Math.floor(b.chrome.csi().pageT),c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.chrome.csi().startE),\nc[g](\42tbnd_\42,\42_tbnd\42,f))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.external.startE),c[g](\42tbnd_\42,\42_tbnd\42,f))),a\46\46(b[e].pt\75a)}catch(l){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[e].load[g](\42aft\42)};var h\75!1;function k(){h||(h\75!0,b[e].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,k,!1):b.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/15de8d1bfc9ff1d1', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n'}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'blogger_engine-data_container', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'blogger_engine-data_container', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/1796980258-lbx__ru.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/4138445517-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'blogger_engine-data_container', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'blogger_engine-data_container', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'null', null, document.getElementById('PageList1'), {'title': 'Страницы', 'links': [{'href': 'http://vlikin.blogspot.com/', 'title': 'Главная страница', 'isCurrentPage': true}], 'mobile': false}, 'displayModeFull'));
+</script>
+
+</body></html>
