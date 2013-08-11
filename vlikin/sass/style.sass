@@ -1,24 +1,58 @@
 @import "blueprint/grid"
 
 body
-	background: yellow
+	background-image: url("style/sky-tile.png")
+
+pre
+	background: lightgrey
+	font-family: sans-serif
+	font-size: 12px
+	border: solid 1px grey
+	padding: 5px
 
 #blogger_engine-data_container
 	@include container
+
+	&:before
+		content: ""
+		background: lightblue
+		display: block
+		height: 50px
+		margin-bottom: -50px
+
+
+$header_height: 150px
+#Header1
+	background-image: url("style/logo.png")
+	background-repeat: no-repeat
+	height: $header-height
+	padding-left: $header-height
+
+	#header-inner
+		background-image: url("style/plane.png")
+		background-position: right 20px
+		background-repeat: no-repeat
+		height: $header-height
+
 #Blog1
 	+column(18)
-	background: blue
 
 	.date-outer
 		margin-bottom: 10px
+		padding: 10px
+		background: white
 
+
+		.date-header
 		.post
-			background: white
-
 
 #Profile1
 	+column(6, true)
-	background: green
 
 #BlogArchive1
 	+column(6, true)
+
+#footer
+	height: 400px
+	background-image: url("style/yacht.png")
+	margin-top: -300px
