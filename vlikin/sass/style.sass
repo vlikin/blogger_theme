@@ -3,6 +3,21 @@
 body
 	background-image: url("style/sky-tile.png")
 
+#body-top-bg
+	background-image: url("style/body-top-bg-tile.png")
+	background-position: left top
+	background-repeat: repeat-x
+
+#body-bottom-bg
+	background-image: url("style/sea-tile.png")
+	background-position: right bottom
+	background-repeat: repeat-x
+
+#page-bottom-bg
+	background-image: url("style/yacht.png")
+	background-position: right bottom
+	background-repeat: no-repeat
+
 pre
 	background: lightgrey
 	font-family: sans-serif
@@ -10,15 +25,12 @@ pre
 	border: solid 1px grey
 	padding: 5px
 
-#blogger_engine-data_container
-	@include container
+.section
+	z-index: 1
 
-	&:before
-		content: ""
-		background: lightblue
-		display: block
-		height: 50px
-		margin-bottom: -50px
+
+#page
+	@include container
 
 
 $header_height: 150px
@@ -42,10 +54,6 @@ $header_height: 150px
 		padding: 10px
 		background: white
 
-
-		.date-header
-		.post
-
 #Profile1
 	+column(6, true)
 
@@ -53,6 +61,17 @@ $header_height: 150px
 	+column(6, true)
 
 #footer
+	clear: both
+	display: block
 	height: 400px
-	background-image: url("style/yacht.png")
+	
 	margin-top: -300px
+	z-index: 1
+
+#sea
+	height: 64px
+	background-image: url("style/sea-tile.png")
+	margin-top: -64px
+	z-index: -1
+	position: absolute
+	width: 100%

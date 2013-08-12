@@ -4,6 +4,27 @@ body {
 }
 
 /* line 6, ../sass/style.sass */
+#body-top-bg {
+  background-image: url("style/body-top-bg-tile.png");
+  background-position: left top;
+  background-repeat: repeat-x;
+}
+
+/* line 11, ../sass/style.sass */
+#body-bottom-bg {
+  background-image: url("style/sea-tile.png");
+  background-position: right bottom;
+  background-repeat: repeat-x;
+}
+
+/* line 16, ../sass/style.sass */
+#page-bottom-bg {
+  background-image: url("style/yacht.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+/* line 21, ../sass/style.sass */
 pre {
   background: lightgrey;
   font-family: sans-serif;
@@ -12,30 +33,27 @@ pre {
   padding: 5px;
 }
 
-/* line 13, ../sass/style.sass */
-#blogger_engine-data_container {
+/* line 28, ../sass/style.sass */
+.section {
+  z-index: 1;
+}
+
+/* line 32, ../sass/style.sass */
+#page {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 16, ../sass/style.sass */
-#blogger_engine-data_container:before {
-  content: "";
-  background: lightblue;
-  display: block;
-  height: 50px;
-  margin-bottom: -50px;
-}
 
-/* line 25, ../sass/style.sass */
+/* line 37, ../sass/style.sass */
 #Header1 {
   background-image: url("style/logo.png");
   background-repeat: no-repeat;
   height: 150px;
   padding-left: 150px;
 }
-/* line 31, ../sass/style.sass */
+/* line 43, ../sass/style.sass */
 #Header1 #header-inner {
   background-image: url("style/plane.png");
   background-position: right 20px;
@@ -43,7 +61,7 @@ pre {
   height: 150px;
 }
 
-/* line 37, ../sass/style.sass */
+/* line 49, ../sass/style.sass */
 #Blog1 {
   display: inline;
   float: left;
@@ -54,14 +72,14 @@ pre {
 * html #Blog1 {
   overflow-x: hidden;
 }
-/* line 40, ../sass/style.sass */
+/* line 52, ../sass/style.sass */
 #Blog1 .date-outer {
   margin-bottom: 10px;
   padding: 10px;
   background: white;
 }
 
-/* line 49, ../sass/style.sass */
+/* line 57, ../sass/style.sass */
 #Profile1 {
   display: inline;
   float: left;
@@ -73,7 +91,7 @@ pre {
   overflow-x: hidden;
 }
 
-/* line 52, ../sass/style.sass */
+/* line 60, ../sass/style.sass */
 #BlogArchive1 {
   display: inline;
   float: left;
@@ -85,9 +103,21 @@ pre {
   overflow-x: hidden;
 }
 
-/* line 55, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
 #footer {
+  clear: both;
+  display: block;
   height: 400px;
-  background-image: url("style/yacht.png");
   margin-top: -300px;
+  z-index: 1;
+}
+
+/* line 71, ../sass/style.sass */
+#sea {
+  height: 64px;
+  background-image: url("style/sea-tile.png");
+  margin-top: -64px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
 }
